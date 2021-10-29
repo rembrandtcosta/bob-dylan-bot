@@ -16,6 +16,8 @@ def main():
     sentence = sentence_generator.generate_random_sentence()
 
     print(sentence)
+    
+    assert len(sentence)<=280
 
     api.update_status(sentence)
 
