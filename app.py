@@ -1,6 +1,4 @@
-from flask import Flask
 from time import sleep
-from os import environ
 import update_bot
 
 while True: 
