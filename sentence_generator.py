@@ -1,7 +1,13 @@
-import sys
+import subprocess
+from random import randint
 
 def generate_random_sentence():
 	sentence = ''	
-	# TO-DO generate random number, decide upon number of lines, get lines using sed
+	sz = 20597
+	r = 0
+	while (r + 3 <= sz):
+		r = randint(1, sz + 1)
+	s = "sed -n '" + str(r) + "," + str(r + 3) + "p' ./data/all_songs.txt" 
+	sentence = subprocess.call([s], shell = True)
 	return sentence
 
